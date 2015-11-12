@@ -1,0 +1,124 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>site</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="logo">
+      </div>
+      <nav>
+        <a href="#"><div class="icon-menu"></div></a>
+        <a href="#"><div class="icon-settings"></div></a>
+        <a href="#"><div class="icon-message"></div></a>
+      </nav>
+    </header>
+    
+    <div class="page">
+
+      <aside>
+        <ul class="package"><span>работа с посылками</span>
+          <li><a href="#" class="receive"><span class="icon-arrow_down"></span>Приём</a>
+            <ul class="sub-menu">
+              <li><a href="#">Единичный</a></li>
+              <li><a href="#">С регистрацией</a></li>
+              <li><a href="#">Файл</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><span class="icon-arrow_up"></span>Выпуск</a></li>
+          <li><a href="#"><span class="icon-storage"></span>Хранение</a></li>
+        </ul>
+      </aside>
+
+      <div class="content">
+        <div class="title">
+          <h1>Приём с регистрацией</h1>
+        </div>
+        <div class="carcass-forms">
+
+          <div class="form-main">
+            <input type="text" placeholder="ДТД 121315164811">
+            <label><input type="checkbox" value="1" name="k"><span></span></label>
+            <h3>Автогенерация</h3>
+          </div>
+
+          <div class="form-from">
+            <div class="sender-min">
+              <span class="sender-title">Отправитель -</span>
+              <span class="sender-number">1</span>
+              <span class="sender-data">10123456738 - Украина, г. Киев, Алексеев А.В.</span>
+              <div class="icon-btn-title">
+                <span class="icon-maximize maximize"></span>
+                <span class="icon-del del"></span>
+              </div>
+            </div>
+            <form action="" class="form-sender">
+              <div class="sender-max">
+                <span class="sender-title">Отправитель -</span>
+                <span class="sender-number">1</span>
+                <div class="icon-btn-title">
+                  <span class="icon-minimaze minimaze"></span>
+                  <span class="icon-del del"></span>
+                </div>
+              </div>
+              <div class="form-sender-data">
+                <div class="code-before"><input type="text" class="code"  placeholder="1213151648"></div>
+                <div class="name-before"><input type="text" class="name"  placeholder="Петросян Олег Петрович"></div>
+                <div class="tel-before"><input type="text" class="tel"  placeholder="+(38) 063 777 12 77"></div>
+                <div class="country-before">
+                  <select name="country" class="country">
+                    <option selected value="ua">Украина</option>
+                    <option value="ru">Россия</option>
+                    <option value="by">Белорусь</option>
+                  </select>
+                </div>
+                <input type="text" class="adress"  placeholder="Украина, г. Киев, ул. Иллинского 15, оф. 105">
+                <button class="save">Сохранить</button>
+              </div>
+            </form>
+            <button class="add"><span class="icon-add"></span></button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+    
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

@@ -1,0 +1,393 @@
+// bower:scss
+// endbower
+
+@import "bourbon/bourbon";
+
+@import "reset.scss";
+@import "fonts.scss";
+@import "sprite.scss";
+
+
+
+
+body {
+  font-family: $font-regular;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+
+header {
+  height: 47px;
+  background-color: #29313d;
+  overflow: hidden;
+  @include clearfix;
+  .logo {
+    float: left;
+    margin: 12px 18px 0;
+  }
+  nav {
+    display: inline-block;
+    a {
+      display: inline-block;
+      padding: 15px;
+      &:focus {
+        background-color: #354052;
+      }
+    }
+  }
+}
+
+.page {
+  @include clearfix;
+  height: auto;
+}
+aside {
+  float: left;
+  width: 229px;
+  background-color: #354052;
+  height: 100vh;
+}
+.package {
+  margin-left: 20px;
+  margin-top: 25px;
+  & > span {
+    text-transform: uppercase;
+    color: #bbddf8;
+    font-size: em(10);
+  }
+  & > li {
+    padding: 10px 0;
+    span {
+      display: inline-block;
+      margin-right: 12px;
+    }
+    a {
+      font-size: em(13);
+      color: #e9f4fd;
+    }
+    & :focus {
+      background-color: #29313d;
+    }
+  }
+}
+.sub-menu {
+  margin-left: 26px;
+  display: none;
+  li {
+    margin-top: 10px;
+  }
+  a {
+    padding: 5px 0;
+  }
+}
+
+//------toggle-------
+
+label {
+  width: 35px;
+  height: 17px;
+  display: block;
+  position: relative;
+  background-color: #22a8f5;
+  border-radius: 17px;
+  border: 2px solid #b5c1c8;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + span {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 50%;
+  height: 100%;
+  display: block;
+  background-color: #fff;
+  border-radius: 17px;
+  border: 1px solid #b5c1c8;
+  cursor: default;
+  transition: 200ms;
+}
+input[type="checkbox"]:checked + span {
+  left: 48%;
+}
+
+//-----------toggle--- end-------
+
+//--------content---right---------
+.content {
+  float: right;
+  width: (1000px-229px);
+  height: 100vh;
+  background-color: #f3f6f8;
+}
+.title {
+  background-color: #FFF;
+  border-right: 1px solid #f3f6f8;
+  h1 {
+    font-size: em(18);
+    font-family: $font-medium;
+    color: #727a87;
+    padding: 20px 0 20px 15px;
+    border-bottom: solid 1px #d0dae0;
+  } 
+}
+.carcass-forms {
+  padding: 0 20px;
+}
+input, select {
+  border: solid 1px #d0dae0;
+  background-color: #FFF;
+  height: 27px;
+  padding-left: 7px;
+  color: #c4c9d2;
+  font-family: $font-regular;
+  font-size: em(12);
+  border-radius: 3px;
+  display: inline-block;
+  &:focus {
+    color: #727a87;
+  }
+}
+/*h2 {
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: $font-regular;
+    font-size: em(11);
+    color: #99a2a8;
+    width: 142px;
+}*/
+.form-main {
+  position: relative;
+  padding: 25px 0;
+  border-bottom: dotted 1px #d0dae0;
+  padding-left: 142px;
+  label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 17px;
+  }
+  h3 {
+    //@extend h2;
+    display: inline-block;
+    font-family: $font-regular;
+    font-size: em(11);
+    color: #99a2a8;
+    text-transform: none;
+    width: auto;
+    margin-left: 10px;
+  }
+  & > input {
+    width: 273px;
+  }
+  &:before {
+    content: "основное";
+    position: absolute;
+    left: 0;
+    top: 48%;
+    font-family: $font-regular;
+    font-size: em(11);
+    color: #99a2a8;
+    text-transform: uppercase;
+  }
+}
+
+.form-from {
+  position: relative;
+  padding: 25px 0;
+  border-bottom: dotted 1px #d0dae0;
+  padding-left: 142px;
+  @include clearfix;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: 'откуда';
+    text-transform: uppercase;
+    top: 48%;
+    left: 0;
+    font-family: $font-regular;
+    font-size: em(11);
+    color: #99a2a8;
+  }
+  .sender-min, .sender-max {
+    width: 100%;
+    //height: 36px;
+    padding: 14px 0;
+    background-color: #FFF;
+    border: solid 1px #d0dae0;
+    border-radius: 3px;
+    @include clearfix;
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .sender-title, .sender-number {
+      color: #727a87;
+      font-family: $font-medium;
+      font-size: em(12);
+      margin-left: 15px;
+    }
+    .sender-number {
+      margin-left: 0px;
+    }
+    .sender-data {
+      color: #949fb2;
+      font-family: $font-regular;
+      font-size: em(11);
+      margin-left: 20px;
+    }
+  }
+}
+.icon-btn-title {
+  float: right;
+  margin-right: 15px;
+  span {
+    margin-left: 7px;
+    &:hover {
+      cursor: pointer;
+      opacity: .6;
+    }
+  }
+}
+
+.form-sender {
+  display: none;
+  margin-top: 5px;
+  background-color: #FFF;
+  border-radius: 3px;
+  border: 1px solid #d0dae0;
+  width: 100%;
+  .sender-max {
+    border: none;
+    border-bottom: 1px dotted #d0dae0;
+  }
+}
+
+.save {
+  color: #fff;
+  background-color: #22a8f5;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 27px;
+  float: right;
+  margin: 15px 0;
+  font-family: $font-medium;
+  font-size: em(11);
+  &:hover {
+    cursor: pointer;
+    opacity: .8;
+  }
+}
+.form-sender-data {
+  margin: 20px 40px 0;
+  @include clearfix;
+  .code, .tel, {
+    width: 36%;
+    float: left;
+    margin-bottom: 10px;
+    padding-left: 60px;
+  }
+  .name, .country {
+    @extend .code;
+    float: right;
+  }
+  .adress {
+    width: 88%;
+    padding-left: 60px;
+    position: relative;
+  }
+}
+
+.add {
+  background-color: #FFF;
+  cursor: pointer;
+  border: 1px solid #d0dae0;
+  border-radius: 3px;
+  padding: 10px;
+  margin-top: 5px;
+  span {
+    display: block;
+  }
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.code-before, .name-before, .tel-before, .country-before {
+  position: relative;
+  //@include clearfix;
+}
+.code-before:before {
+  position: absolute;
+  content: 'код';
+  text-transform: uppercase;
+  top: 11px;
+  left: 10px;
+  color: #c4c9d2;
+  font-family: $font-medium;
+  font-size: em(8);
+}
+.name-before:before {
+  position: absolute;
+  content: 'фио';
+  text-transform: uppercase;
+  top: 11px;
+  left: 273px;
+  color: #c4c9d2;
+  font-family: $font-medium;
+  font-size: em(8);
+}
+.tel-before:before {
+  position: absolute;
+  content: 'телефон';
+  text-transform: uppercase;
+  top: 53px;
+  left: 10px;
+  color: #c4c9d2;
+  font-family: $font-medium;
+  font-size: em(8);
+}
+.tel-before:after {
+  position: absolute;
+  content: 'адрес';
+  text-transform: uppercase;
+  top: 94px;
+  left: 10px;
+  color: #c4c9d2;
+  font-family: $font-medium;
+  font-size: em(8);
+  z-index: 10;
+}
+.country-before:before {
+  position: absolute;
+  content: 'страна';
+  text-transform: uppercase;
+  top: 53px;
+  left: 273px;
+  color: #c4c9d2;
+  font-family: $font-medium;
+  font-size: em(8);
+}
+.country {
+  padding-left: 54px !important;
+  width: 48% !important;
+  height: 30px !important;
+  background-image: url("../images/selectmenu.png");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  overflow: hidden;
+  appearance: none !important;
+  option {
+    padding: 5px 7px;
+  }
+}
